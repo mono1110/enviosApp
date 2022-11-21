@@ -20,12 +20,12 @@
                   <td>{{envio.idEnvio}}</td>
                   <td>{{envio.nombreDestinatario}}</td>
                   <td>{{envio.fecha}}</td>
-                  <td>{{envio.usuario}}</td>
-                  <td>{{envio.mediopago}}</td>
-                  <td>{{envio.mediostransporte}}</td>
-                  <td>{{envio.cliente}}</td>
+                  <td>{{envio.usuario.nombreUsuario}}</td>
+                  <td>{{envio.mediopago.nombreMedioPago}}</td>
+                  <td>{{envio.mediostransporte.placa}}</td>
+                  <td>{{envio.cliente.nombre}}</td>
                   <td>{{envio.puntosEnvioRecepcion}}</td>
-                  <td>{{envio.paquetes}}</td>
+                  <td *ngFor="let paquetes of envio.paquetes">{{paquetes.idPaquete}}</td>
              </tr>
         </tbody>
      </table>
