@@ -15,13 +15,13 @@ export class Envio {
 
 	usuario: Usuario = new Usuario();	
 	
-	medioPago: Mediopago = new Mediopago();	
+	mediopago: Mediopago = new Mediopago();	
 
-	mediosTransporte: Mediostransporte = new Mediostransporte();
+	mediostransporte: Mediostransporte = new Mediostransporte();
 	
 	cliente: Cliente = new Cliente();
 
-	puntosenviorecepcion:Puntosenviorecepcion[]=[];
+	puntosEnvioRecepcion:Puntosenviorecepcion[]=[];
 	
 	paquetes:Paquete[]=[];
 
