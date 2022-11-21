@@ -1,0 +1,18 @@
+<div class="card">
+    <h5 class="card-header">{{titulo}}</h5>
+    <div class="card-body">
+        <button type="button" class="btn btn-secondary my-2" routerLink="/tipomercancia">Regresar</button>
+        <form>
+            <div class="form-group">
+                <label for="nombreTipoMercancia">Nombre</label>
+                <input type="text" name="nombreTipoMercancia" id="nombreTipoMercancia" class="form-control" [(ngModel)]="tipomercancia.nombreTipoMercancia">
+                <div class="alert alert-danger" *ngIf="error && error.nombreTipoMercancia">{{error.nombreTipoMercancia}}</div>
+            </div>
+            <div class="form-group">
+                <!-- <button type="button" class="btn btn-primary" (click)="producto id? modificar(): crear()">{{producto.id? 'Modificar' : 'Crear'}}</button> -->
+                <button type="button" class="btn btn-primary" (click)="crear()">Crear</button>
+            </div>
+
+        </form>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="card border-primary mb-3">
+    <div class="card-header">{{titulo}}</div>
+    <div class="card-body text-primary">
+    <table class="table table-hover table-striped">
+      <thead>
+          <tr>
+              <th>id</th>
+              <th>nombredestinatario</th>
+              <th>fecha</th>
+              <th>usuario</th>
+              <th>medioPago</th>
+              <th>medioTransporte</th>
+              <th>cliente</th>
+              <th>puntosenviorecepcion</th>
+              <th>paquetes</th>
+          </tr>
+       </thead>
+       <tbody>
+             <tr *ngFor="let envio of lista">
+                  <td>{{envio.idEnvio}}</td>
+                  <td>{{envio.nombreDestinatario}}</td>
+                  <td>{{envio.fecha}}</td>
+                  <td>{{envio.usuario}}</td>
+                  <td>{{envio.medioPago}}</td>
+                  <td>{{envio.mediosTransporte}}</td>
+                  <td>{{envio.cliente}}</td>
+                  <td>{{envio.puntosenviorecepcion}}</td>
+                  <td>{{envio.paquetes}}</td>
+             </tr>
+        </tbody>
+     </table>
+    </div>
+  </div>
+

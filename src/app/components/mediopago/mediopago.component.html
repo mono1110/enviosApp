@@ -1,0 +1,23 @@
+<div class="card border-primary mb-3">
+    <div class="card-header">{{titulo}}</div>
+    <div class="card-body text-primary">
+    <table class="table table-hover table-striped">
+      <thead>
+          <tr>
+              <th>id</th>
+              <th>nombre</th>
+              <th>tipo de mediopago</th>
+              <th>estado</th>
+          </tr>
+       </thead>
+       <tbody>
+             <tr *ngFor="let mediopago of lista">
+                  <td>{{mediopago.idMedioPago}}</td>
+                  <td>{{mediopago.nombreMedioPago}}</td>
+                  <td>{{mediopago.tipoMedioPago}}</td>
+                  <td>{{mediopago.activo}}</td>
+             </tr>
+        </tbody>
+     </table>
+    </div>
+  </div>

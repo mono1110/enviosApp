@@ -1,0 +1,38 @@
+<div class="card border-primary mb-3">
+    <div class="card-header">{{titulo}}</div>
+    <div class="card-body text-primary">
+      <button type="button" class="btn btn-primary" routerLink="/puntoenviorecepcion/form">Crear Punto Envio Recepción</button>
+      <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>nombre</th>
+                <th>ciudad</th>
+                <th>direccion</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+              <tr *ngFor="let puntosenviorecepcion of lista">
+                    <td>{{puntosenviorecepcion.idPuntoEnvio}}</td>
+                    <td>{{puntosenviorecepcion.nombrePuntoEnvio}}</td>
+                    <td>{{puntosenviorecepcion.ciudadPuntoEnvio}}</td>
+                    <td>{{puntosenviorecepcion.direccionPuntoEnvio}}</td>
+
+                    <td>
+                      <button type="button" class="btn btn-secondary"
+                        [routerLink]="['/puntoenviorecepcion/form',puntosenviorecepcion.idPuntoEnvio]">Editar
+                      </button>
+                    </td>
+                    <td>
+                      <button type="button" class="btn btn-danger"
+                        (click)="eliminar(puntosenviorecepcion)">Eliminar
+                      </button>
+                    </td>
+              </tr>
+          </tbody>
+      </table>
+    </div>
+  </div>
+

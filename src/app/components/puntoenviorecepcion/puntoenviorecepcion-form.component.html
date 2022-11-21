@@ -1,0 +1,30 @@
+<div class="card">
+    <h5 class="card-header">{{titulo}}</h5>
+    <div class="card-body">
+        <button type="button" class="btn btn-secondary my-2" routerLink="/puntoenviorecepcion">Regresar</button>
+        <form>
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" class="form-control" [(ngModel)]="puntosenviorecepcion.nombrePuntoEnvio">
+                <div class="alert alert-danger" *ngIf="error && error.nombrePuntoEnvio">{{error.nombrePuntoEnvio}}</div>
+            </div>
+            <div class="form-group">
+                <label for="ciudad">Ciudad</label>
+                <input type="text" name="ciudad" id="ciudad" class="form-control" [(ngModel)]="puntosenviorecepcion.ciudadPuntoEnvio">
+                <div class="alert alert-danger" *ngIf="error && error.ciudadPuntoEnvio">{{error.ciudadPuntoEnvio}}</div>
+            </div>
+            <div class="form-group">
+                <label for="direccion">Dirección</label>
+                <input type="text" name="direccion" id="direccion" class="form-control" [(ngModel)]="puntosenviorecepcion.direccionPuntoEnvio">
+                <div class="alert alert-danger" *ngIf="error && error.direccionPuntoEnvio">{{error.direccionPuntoEnvio}}</div>
+            </div>
+            
+            <div class="form-group">
+                <!-- <button type="button" class="btn btn-primary" (click)="producto id? modificar(): crear()">{{producto.id? 'Modificar' : 'Crear'}}</button> -->
+                <button type="button" class="btn btn-primary" (click)="crear()">Crear</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
